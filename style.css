@@ -1,0 +1,90 @@
+body{
+    margin:0;
+    padding:0;
+    color:rgb(144, 163, 177);
+    font-family: "Merriweather", Garamond, serif;
+    background-color: rgb(218, 216, 216);
+}
+
+header{
+    padding:10px 20px;
+    margin: 0px;
+    align-items: center;
+    background-color: blanchedalmond;
+    display: flex;
+    gap:30px;
+}
+
+main{
+    padding:10px 20px;
+    margin: 0px;
+    background-color: rgb(134, 96, 37);
+}
+
+h1{
+    color:rgb(33, 69, 84);
+    font-weight:bold;
+    margin:0px;
+    background-color: bisque;
+}
+
+h2{
+    color:rgb(83, 107, 117);
+    margin:0px;
+
+
+    background-color: aqua;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display:flex;
+    gap:30px;
+}
+
+a{
+    color:rgb(83, 107, 117);
+    text-decoration:none;
+
+
+    background-color: blueviolet;
+}
+
+a:hover{
+color:rgb(210, 146, 72);
+}
+
+.work{
+    margin:0;
+    padding:0;
+
+}
+
+.work figure img{
+    width:100%;
+}
+
+@media screen and (max-width:800px) {
+    h2{
+        visibility:collapse;
+    }
+}
+
+@media screen and (max-width:500px) {
+    header{
+        flex-direction: column;
+        gap:0px;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        display:flex;
+        gap:30px;
+    }
+    h2{
+        visibility:collapse;
+    }
+}
