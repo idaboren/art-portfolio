@@ -4,87 +4,106 @@ body{
     color:rgb(144, 163, 177);
     font-family: "Merriweather", Garamond, serif;
     background-color: rgb(218, 216, 216);
+    display: flex;
+    flex-direction: column;
 }
 
 header{
-    padding:10px 20px;
+    padding:0px 50px;
     margin: 0px;
     align-items: center;
-    background-color: blanchedalmond;
     display: flex;
-    gap:30px;
+    justify-content: space-between;
 }
 
 main{
-    padding:10px 20px;
+    padding:0px 50px;
     margin: 0px;
-    background-color: rgb(134, 96, 37);
+}
+
+footer{
+    padding:0px 50px;
+    margin: 0px;
 }
 
 h1{
     color:rgb(33, 69, 84);
+    font-size: xxx-large;
     font-weight:bold;
-    margin:0px;
-    background-color: bisque;
+    transform: scaleY(1.5);
+    margin:30px 0px;
 }
 
 h2{
+    font-size: medium;
+    font-weight:bold;
     color:rgb(83, 107, 117);
-    margin:0px;
-
-
-    background-color: aqua;
 }
 
 ul{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    display:flex;
+    display: flex;
+}
+
+#nav-list{
     gap:30px;
 }
 
 a{
     color:rgb(83, 107, 117);
     text-decoration:none;
-
-
-    background-color: blueviolet;
 }
 
 a:hover{
 color:rgb(210, 146, 72);
 }
 
-.work{
-    margin:0;
-    padding:0;
-
+#work-list{
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.work figure img{
-    width:100%;
+.work-item{
+    margin: 0px;
+    padding: 0px
 }
 
-@media screen and (max-width:800px) {
+.work-image{
+    width: 400px;
+}
+
+@media screen and (max-width:860px) {
+    h1{
+        margin:0px;
+    }
+    #nav-list{
+        font-size: large;
+    }
     h2{
         visibility:collapse;
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:670px) {
     header{
         flex-direction: column;
-        gap:0px;
+        gap:15px;
+        margin:30px 0px;
     }
-    ul{
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px;
-        display:flex;
+    #nav-list{
         gap:30px;
+        font-size: large;
     }
     h2{
         visibility:collapse;
+    }
+    #work-list{
+        flex-direction: column;
+    }
+    .work-image{
+        width: 100%;
     }
 }
