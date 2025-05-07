@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
 body{
     margin:0;
     padding:0;
@@ -10,7 +12,7 @@ body{
 
 header{
     padding:0px 50px;
-    margin: 0px;
+    margin:20px 0px;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,8 @@ footer{
     margin: 0px;
 }
 
+/* Headings */
+
 h1{
     color:rgb(33, 69, 84);
     font-size: xxx-large;
@@ -36,18 +40,25 @@ h1{
 
 h2{
     font-size: medium;
-    font-weight:bold;
+    font-weight: bold;
     color:rgb(83, 107, 117);
 }
+
+h3{
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+}
+
+/* Other */
 
 ul{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    display: flex;
 }
 
 #nav-list{
+    display: flex;
     gap:30px;
 }
 
@@ -60,25 +71,7 @@ a:hover{
 color:rgb(210, 146, 72);
 }
 
-#work-list{
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.work-item{
-    margin: 0px;
-    padding: 0px
-}
-
-.work-image{
-    width: 400px;
-}
-
 @media screen and (max-width:860px) {
-    h1{
-        margin:0px;
-    }
     #nav-list{
         font-size: large;
     }
@@ -87,23 +80,12 @@ color:rgb(210, 146, 72);
     }
 }
 
-@media screen and (max-width:670px) {
+@media screen and (max-width:725px) {
     header{
         flex-direction: column;
-        gap:15px;
-        margin:30px 0px;
     }
     #nav-list{
         gap:30px;
         font-size: large;
-    }
-    h2{
-        visibility:collapse;
-    }
-    #work-list{
-        flex-direction: column;
-    }
-    .work-image{
-        width: 100%;
     }
 }
