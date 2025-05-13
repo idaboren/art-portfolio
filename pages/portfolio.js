@@ -21,34 +21,56 @@ function createSectionsForEveryTag() {
 
 function createSectionByTag(tag) {
     const section = document.createElement("section");
+    const sectionContent = document.createElement("div");
+    const column1 = document.createElement("div");
+    const column2 = document.createElement("div");
+    const column3 = document.createElement("div");
     const sectionTitle = document.createElement("h3");
-    const sectionArt = document.createElement("ul");
+    let sectionLength = 0;
+    let sectionArtList = [];
 
     sectionTitle.innerText = tag;
-    sectionArt.classList.add("artworks-list");
+    sectionContent.classList.add("sectionContent")
+    column1.classList.add("column");
+    column2.classList.add("column");
+    column3.classList.add("column");
 
     for (let i = 0; i < artData.length; i++){
         if ((artData[i].tags).includes(tag)){
-            const listItem = document.createElement("li");
-            const figure = document.createElement("figure");
-            const figureImg = document.createElement("img");
-            const figureCaption = document.createElement("figureCaption");
-    
-            figure.classList.add("artwork-item");
-            figureImg.src = path + artData[i].path;
-            figureImg.alt = artData[i].altText;
-            figureImg.classList.add("artwork-image");
-            figureCaption.innerText = artData[i].title;
-            figureCaption.classList.add("artwork-title");
-    
-            listItem.append(figure);
-            figure.append(figureImg, figureCaption);
-            sectionArt.append(listItem);
+            sectionLength ++;
+            sectionArtList.push(artData[i]);
+        }
+    }
+
+    for (let i = 0; i < sectionArtList.length; i++){
+        const figure = document.createElement("figure");
+        const figureImg = document.createElement("img");
+        // const figureCaption = document.createElement("figureCaption");
+
+        figure.classList.add("artwork-item");
+        figureImg.src = path + artData[i].path;
+        figureImg.alt = artData[i].altText;
+        figureImg.classList.add("artwork-image");
+        // figureCaption.innerText = artData[i].title;
+        // figureCaption.classList.add("artwork-title");
+
+        figure.append(figureImg);
+        if (i<sectionLength/3)
+        {
+            column1.append(figure);
+        }
+        else if(i>(sectionLength/3) && i<=((sectionLength/3)*2))
+        {
+            column2.append(figure);
+        }
+        else{
+            column3.append(figure);
         }
     }
 
     main.append(section);
-    section.append(sectionTitle, sectionArt);
+    section.append(sectionTitle, sectionContent);
+    sectionContent.append(column1, column2, column3);
 }
 
 async function setArtData() {

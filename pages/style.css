@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
+:root {
+    /* Colors */
+    --background-color: rgb(218, 216, 216);
+    --standard-text: rgb(83, 107, 117);
+    --accent-dark: rgb(33, 69, 84);
+    --accent-light: rgb(210, 146, 72);
+  }  
+
 body{
     margin:0;
     padding:0;
-    color:rgb(144, 163, 177);
+    color:var(--standard-text);
     font-family: "Merriweather", Garamond, serif;
-    background-color: rgb(218, 216, 216);
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
 }
@@ -31,7 +39,7 @@ footer{
 /* Headings */
 
 h1{
-    color:rgb(33, 69, 84);
+    color:var(--accent-dark);
     font-size: xxx-large;
     font-weight:bold;
     transform: scaleY(1.5);
@@ -39,13 +47,14 @@ h1{
 }
 
 h2{
+    color:var(--accent-dark);
     font-size: medium;
     font-weight: bold;
-    color:rgb(83, 107, 117);
 }
 
 h3{
-    margin: 0px 0px 5px 0px;
+    color:var(--accent-dark);
+    margin: 0px 0px 10px 0px;
     padding: 0px;
 }
 
@@ -63,12 +72,12 @@ ul{
 }
 
 a{
-    color:rgb(83, 107, 117);
+    color:var(--accent-dark);
     text-decoration:none;
 }
 
 a:hover{
-color:rgb(210, 146, 72);
+color: var(--accent-light);
 }
 
 @media screen and (max-width:860px) {

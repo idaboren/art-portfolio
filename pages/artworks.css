@@ -1,25 +1,29 @@
 section{
-    padding-bottom: 50px;
-}
-
-.artworks-list{
     display: flex;
-    flex-wrap: wrap;
-    align-items: end;
-    gap: 20px;
+    flex-direction: column;
+    width: fit-content;
+}
+    
+.sectionContent{
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100vw - 120px);
 }
 
 /* Figure */
 .artwork-item{
-    margin: 0px;
+    margin: 0 0 20px 0;
     padding: 0px;
+    flex: 100%;
     display: flex;
     flex-direction: column;
 }
 
 /* Figure img */
 .artwork-image{
-    width: 300px;
+    width: calc(100vw/3 - 50px);
+    max-width: 500px;
 }
 
 .artwork-image:hover{
@@ -32,12 +36,14 @@ section{
 }
 
 @media screen and (max-width:725px) {
-    .artworks-list{
-
+    section > h3{
+        text-align: center;
     }
-    .artwork-item{
+    .sectionContent{
+        flex-direction: column;
     }
     .artwork-image{
-        width: 100%;
+        width: calc(100vw - 70px);
+        align-self: center;
     }
 }
