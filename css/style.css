@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pirata+One&display=swap');
+
+:root {
+    /* Colors */
+    --background-color: rgb(221, 221, 221);
+    --standard-text: rgb(0, 0, 0);
+    --accent-dark: rgb(95, 95, 95);
+    --accent-light: rgb(184, 184, 184);
+  }  
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--standard-text);
+    font-family: "Grenze", Garamond, serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-center {
+    margin: 0px 50px;
+    min-height: inherit;
+    max-width: 1540px; /* 3*500 (image widths) + 2*20 (gaps) */
+    width: calc(100vw - 110px);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    margin: 0px;
+    flex: 1;
+}
+
+footer {
+    margin: 0px;
+}
+
+/* Headings */
+
+h1 {
+    font-family: "Pirata One", Garamond, serif;
+    font-size: xxx-large;
+    /* font-weight: bold; */
+    /* transform: scaleY(1.5); */
+    margin: 30px 0px;
+}
+
+h2 {
+    font-size: large;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3 {
+    font-size: large;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Other */
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#nav-list {
+    font-size: larger;
+    display: flex;
+    gap: 30px;
+}
+
+a {
+    color:  var(--standard-text);
+    text-decoration: none;
+}
+
+a:hover {
+color: var(--accent-dark);
+}
+
+p {
+    overflow-wrap: break-word;
+    hyphens: auto;
+    margin: 0px 0px 10px 0px;
+}
+
+@media screen and (max-width:860px) {
+    .body-center {
+        max-width: 760px; /* max - margins */
+        width: calc(100vw - 110px); /* max vw - margins */
+    }
+}
+
+@media screen and (max-width:725px) {
+    header {
+        flex-direction: column;
+    }
+    .body-center {
+        max-width: 500px; /* max - margins */
+        width: calc(100vw - 100px); /* max vw - margins */
+    }
+}
