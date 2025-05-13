@@ -1,0 +1,36 @@
+[{
+    "path": "testing.png",
+    "title":"Test",
+    "altText":"blue background with the word testing written on it",
+    "tags": ["Cats", "Digital", "frontpage"]
+},
+{
+    "path": "testing2.png",
+    "title":"Test 2",
+    "altText":"purple background with the word testing written on it",
+    "tags": ["Cats", "Traditional"]
+},
+{
+    "path": "testing2.png",
+    "title":"Test 2",
+    "altText":"purple background with the word testing written on it",
+    "tags": ["Cats", "Traditional"]
+},
+{
+    "path": "testing2.png",
+    "title":"Test 2",
+    "altText":"purple background with the word testing written on it",
+    "tags": ["Cats", "Traditional"]
+},
+{
+    "path": "testing2.png",
+    "title":"Test 2",
+    "altText":"purple background with the word testing written on it",
+    "tags": ["Cats", "Traditional"]
+},
+{
+    "path": "testing.png",
+    "title":"Test 3",
+    "altText":"purple background with the word testing written on it",
+    "tags": ["Cats", "Traditional"]
+}]
