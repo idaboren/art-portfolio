@@ -1,0 +1,90 @@
+section{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    /* max-width: inherit;  */
+    /* or image-width*3 + gap*2 => 1540 */
+}
+
+.section-description {
+    padding: 0;
+    margin: 0 0 10px 0;
+    max-width: calc((100vw/3 - 50px)*2); /* 50 = gaps*/
+}
+
+.section-content {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100vw - 110px); /* 110px = gaps + margins */
+    max-width: 1540px; /* image-width*3 + gap*2 */
+}
+
+.section-content:has(> .column-2) {
+    gap: 20px;
+    width: calc(100vw - 110px); /* */
+    
+}
+
+/* Figure */
+.artwork-item {
+    margin: 0 0 20px 0;
+    padding: 0px;
+    flex: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Figure img when image count < 3 */
+.column-3 > * .artwork-image {
+    width: calc(100vw/3 - 50px); /* 50 = gaps*/
+    max-width: 500px;
+}
+
+/* Figure img when image count < 2 */
+.column-2 > * .artwork-image {
+    width: calc((100vw - 130px)/2); /* */
+    max-width: 760px; /* section-width/2 - gap*1 */
+}
+
+/* Figure img when image count < 1 */
+.column-1 > * .artwork-image {
+    width: calc((100vw - 130px)/2); /* */
+    max-width: 760px; /* section-width/2 - gap*1 */
+}
+
+/* When image count < 1, title + description is in column2 */
+.column-2:has(> p ) {
+    width: calc((100vw - 130px)/2); /* */
+    max-width: 760px; /* section-width/2 - gap*1 */
+}
+
+/* Develop when clickable */
+/* .artwork-image:hover{
+    filter: brightness(70%);
+} */
+
+@media screen and (max-width:725px) {
+    section > h3 {
+        text-align: center;
+    }
+    .section-content {
+        flex-direction: column;
+    }
+    .section-content:has(> .column-1) {
+        flex-direction: column-reverse;
+    }
+    .section-description {
+        min-width: calc(100vw - 100px); /* */
+        align-self: center;
+    }
+    .column-2 > h3 {
+        text-align: center;
+    }
+    .column-2:has(> p ) {
+        min-width: calc(100vw - 100px); /* */
+    }
+    .artwork-image {
+        min-width: calc(100vw - 100px); /* 100px = margins */
+    }
+}
