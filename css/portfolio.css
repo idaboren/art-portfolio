@@ -1,0 +1,90 @@
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-description {
+    padding: 0;
+    margin: 0 0 10px 0;
+     max-width: 1020px; /* 2*500 + gap */
+}
+
+.section-content {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-content:has(> .column-2) {
+    gap: 20px;
+    justify-content: left;
+}
+
+/* Figure */
+.artwork-item {
+    margin: 0 0 20px 0;
+    padding: 0px;
+    display: flex;
+    background-color: var(--accent-light);
+    color: var(--light-text);
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+/* Figure img when image count > 3 */
+.column-3 > * .artwork-image {
+    width: calc(100vw/3 - 50px); /* 50 = gaps*/
+    max-width: 500px;
+}
+
+/* Figure img when image count == 2 */
+.column-2 > * .artwork-image {
+    width: calc((100vw - 130px)/2); /* */
+    max-width: 500px;
+}
+
+/* Figure img when image count == 1 */
+.column-1 > * .artwork-image {
+    width: calc((100vw - 130px)/2); /* */
+    max-width: 500px;
+}
+
+/* When image count == 1, title + description is in column2 */
+.column-2:has(> p ) {
+    width: calc((100vw - 130px)/2); /* */
+    max-width: 500px;
+}
+
+@media screen and (max-width:725px) {
+    h2{
+        text-align: center;
+    }
+    .section-content {
+        padding-bottom: 10px;
+        padding-top: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-content:has(> .column-1) {
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+    .section-content:has(> .column-2) {
+        gap: 0px;
+    }
+    .section-description {
+        max-width: inherit;
+    }
+    .column-2:has(> p ) {
+        width: inherit !important;
+    }
+    .artwork-item {
+        max-width: 500px;
+        width: calc(100vw - 100px); /* max vw - margins */
+    }
+    .artwork-image {
+        width: inherit !important;
+    }
+}
