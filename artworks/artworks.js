@@ -1,5 +1,5 @@
 const main = document.getElementsByTagName("main")[0];
-let path = "../artworks/"
+let path = "../artworks/";
 let tags = [];
 let artData = [];
 
@@ -27,11 +27,17 @@ function getSectionByTag(tag) {
     const column5 = document.createElement("div");
     const column6 = document.createElement("div");
     const sectionTitle = document.createElement("h2");
+    const sectionTitleLink = document.createElement("a");
+    const sectionYear = document.createElement("p");
     const sectionDescription = document.createElement("p");
     let sectionLength = 0;
     let sectionArtList = [];
 
     sectionTitle.innerText = tag.name;
+    sectionTitleLink.title = tag.name;
+    sectionTitleLink.href = tag.link;
+    sectionYear.innerText = tag.year;
+    sectionYear.classList.add("section-year");
     sectionDescription.innerText = tag.description;
     sectionDescription.classList.add("section-description");
     sectionContent.classList.add("section-content");
@@ -60,7 +66,10 @@ function getSectionByTag(tag) {
 
         figure.classList.add("artwork-item");
         figureImg.src = path + sectionArtList[i].path;
+        figureImg.width = sectionArtList[i].width;
+        figureImg.height = sectionArtList[i].height;
         figureImg.alt = sectionArtList[i].altText;
+        figureImg.loading = "lazy";
         figureImg.classList.add("artwork-image");
         // figureCaption.innerText = sectionArtList[i].title;
         // figureCaption.classList.add("artwork-title");
@@ -91,26 +100,59 @@ function getSectionByTag(tag) {
     main.append(section);
 
     if (sectionLength >= 3) {
+        
         if (sectionTitle.innerText != "frontpage") { 
-            section.append(sectionTitle);
+        
+            if (tag.link != null) {
+                sectionTitleLink.append(sectionTitle);
+                section.append(sectionTitleLink);
+            } 
+            else {
+                section.append(sectionTitle);
+            }
+
             sectionDescription.innerText ? section.append(sectionDescription) : null; 
+            sectionYear.innerText ? section.append(sectionYear) : null;
         }
+
         section.append(sectionContent);
         sectionContent.append(column4, column5, column6);
     }
     else if (sectionLength == 2) {
-        if (sectionTitle.innerText != "frontpage") { 
-            section.append(sectionTitle);
+
+        if (sectionTitle.innerText != "frontpage") {
+
+            if (tag.link != null) {
+                sectionTitleLink.append(sectionTitle);
+                section.append(sectionTitleLink);
+            } 
+            else {
+                section.append(sectionTitle);
+            }
+
             sectionDescription.innerText ? section.append(sectionDescription) : null; 
+            sectionYear.innerText ? section.append(sectionYear) : null;
         }
+
         section.append(sectionContent);
         sectionContent.append(column2, column3);
     }
     else {
-        if (sectionTitle.innerText != "frontpage") { 
-            column2.append(sectionTitle);
+
+        if (sectionTitle.innerText != "frontpage") {
+
+            if (tag.link != null) {
+                sectionTitleLink.append(sectionTitle);
+                column2.append(sectionTitleLink);
+            } 
+            else {
+                column2.append(sectionTitle);
+            }
+
             sectionDescription.innerText ? column2.append(sectionDescription) : null; 
+            sectionYear.innerText ? column2.append(sectionYear) : null;
         }
+
         section.append(sectionContent);
         sectionContent.append(column1, column2);
     }

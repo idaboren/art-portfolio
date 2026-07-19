@@ -4,12 +4,13 @@ header.innerHTML =
     '<a href="../index.html">' +
         'Ida Borén' +
 '</h1>' +
-// '<h2>' +
-//     '<a href="../pages/contact.html">... is open for commissions!</a>' +
-// '</h2>' +
 '<nav>' +
     '<ul id="nav-list">' +
-        '<a href="../pages/portfolio.html">Portfolio</a>' +
-        '<a href="../pages/contact.html">Contact</a>' +
+        '<li>' +
+            '<a href="../pages/portfolio.html">Portfolio</a>' +
+        '</li>' +
+        '<li>' +
+            '<a href="https://forms.gle/Nbr3etfczazo373p9">Contact ↗</a>' +
+        '</li>' +
     '</ul>' +
 '</nav>';

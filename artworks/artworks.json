@@ -1,49 +1,153 @@
 {
-    "tags":[{
-        "name": "Cats",
-        "description": "paintings of cats"
+    "tags":[
+    {   
+        "name": "Gordon",
+        "year": "2024",
+        "link": null,
+        "description": "Gordon the cat. Oil pastel."
     },
     {   
-        "name": "Sketches",
-        "description": "assortment of sketches lorem ipsum lorem jfesfhseufhseufhsieufhiusehfiusehfiusehfiusheukh ue hfisufhiu isefhsuifh  iesufhsiuafhs a iaufhiu iauhfaiuhefiuhfaieusl ifdsfhseiufhafe"
+        "name": "Lego",
+        "year": "2022",
+        "link": null,
+        "description": "Lego the cat. Gouache."
     },
     {
-        "name": "Test",
-        "description": "assortment of sketches lorem ipsum lorem jfesfhseufhseufhsieufhiusehfiusehfiusehfiusheukh ue hfisufhiu isefhsuifh  iesufhsiuafhs a iaufhiu iauhfaiuhefiuhfaieusl ifdsfhseiufhafe"
+        "name": "Cats",
+        "year": "c. 2018",
+        "link": null,
+        "description": "Series of watercolours."
+    },
+    {
+        "name": "Pixel art",
+        "year": "2026",
+        "link": null,
+        "description": null
+    },
+    {
+        "name": "Autumn",
+        "year": "2019",
+        "link": "https://meekcat.itch.io/autumn",
+        "description": "A Tove Jansson inspired game about leaving. Made in bitsy for a game jam."
     },
     {
         "name": "frontpage",
+        "year": null,
+        "link": null,
         "description": null
     }],
-    
-        
+
     "artworks":[{
-        "path": "3.jpg",
-        "thumbnail":"1thumb.jpg",
+        "path": "aquarelle-cat.jpg",
         "title":"Cat #1",
-        "altText":"Watercolour of a cat lying down hit by a ray of light.",
-        "tags": ["Cats", "frontpage", "Test"]
+        "altText":"Watercolour of a cat lying down. Grayscale.",
+        "width": 700,
+        "height": 700,
+        "tags": ["Cats"]
     },
     {
-        "path": "2.jpg",
-        "thumbnail":"1thumb.jpg",
+        "path": "aquarelle-cat-2.jpg",
         "title":"Cat #2",
-        "altText":"Watercolour of a cat lying down.",
-        "tags": ["Cats", "frontpage"]
+        "altText":"Watercolour of a cat lying down. Grayscale.",
+        "width": 700,
+        "height": 700,
+        "tags": ["Cats"]
     },
     {
-        "path": "3.jpg",
-        "thumbnail":"1thumb.jpg",
+        "path": "aquarelle-cat-3.jpg",
         "title":"Cat #3",
-        "altText":"Watercolour of a cat lying down.",
-        "tags": ["Cats", "Traditional", "Sketches"]
+        "altText":"Watercolour of a blue cat lying down.",
+        "width": 700,
+        "height": 700,
+        "tags": ["Cats"]
     },
     {
-        "path": "4.jpg",
-        "thumbnail":"1thumb.jpg",
+        "path": "aquarelle-cat-4.jpg",
         "title":"Cat #4",
+        "altText":"Watercolour of a cat lying down. Grayscale.",
+        "width": 700,
+        "height": 700,
+        "tags": ["Cats"]
+    },
+    {
+        "path": "aquarelle-cat-5.jpg",
+        "title":"Cat #5",
+        "altText":"Watercolour of a sunset coloured cat lying down.",
+        "width": 700,
+        "height": 700,
+        "tags": ["Cats"]
+    },
+    {
+        "path": "aquarelle-cat-6.jpg",
+        "title":"Cat #6",
+        "altText":"Watercolour of a cat lying down hit by a ray of light. Grayscale.",
+        "width": 700,
+        "height": 700,
+        "tags": ["Cats"]
+    },
+    {
+        "path": "aquarelle-cat-7.jpg",
+        "title":"Cat #7",
+        "altText":"Watercolour of a cat lying down. Grayscale.",
+        "width": 700,
+        "height": 563,
+        "tags": ["Cats"]
+    },
+    {
+        "path": "autumn-1.jpg",
+        "title":"Autumn screenshot 1",
         "altText":"Watercolour of a cat lying down.",
-        "tags": ["Cats", "Sketches"]
+        "width": 700,
+        "height": 700,
+        "tags": ["Autumn"]
+    },
+    {
+        "path": "autumn-2.jpg",
+        "title":"Autumn screenshot 2",
+        "altText":"Watercolour of a cat lying down.",
+        "width": 700,
+        "height": 700,
+        "tags": ["Autumn"]
+    },
+    {
+        "path": "autumn-3.jpg",
+        "title":"Autumn screenshot 3",
+        "altText":"Watercolour of a cat lying down.",
+        "width": 700,
+        "height": 700,
+        "tags": ["Autumn"]
+    },
+    {
+        "path": "lego-1.jpg",
+        "title":"Lego #1",
+        "altText":"Watercolour of a ginger and white cat lying down.",
+        "width": 700,
+        "height": 507,
+        "tags": ["Lego"]
+    },
+    {
+        "path": "lego-2.jpg",
+        "title":"Lego #2",
+        "altText":"Watercolour of a ginger and white cat lying down.",
+        "width": 700,
+        "height": 507,
+        "tags": ["Lego"]
+    },
+    {
+        "path": "gordon-1.jpg",
+        "title":"Gordon #1",
+        "altText":"Oil pastel of a gray and white cat lying down.",
+        "width": 700,
+        "height": 517,
+        "tags": ["Gordon"]
+    },
+    {
+        "path": "pixel-rut.jpg",
+        "title":"Rut the cat",
+        "altText":"Pixelated portrait of a persian cat in black and white.",
+        "width": 300,
+        "height": 300,
+        "tags": ["Pixel art", "frontpage"]
     }
-]
+    ]
 }

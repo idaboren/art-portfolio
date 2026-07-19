@@ -5,12 +5,11 @@ section{
 
 .section-description {
     padding: 0;
-    margin: 0 0 10px 0;
-     max-width: 1020px; /* 2*500 + gap */
+    max-width: 1020px; /* 2*500 + gap */
 }
 
 .section-content {
-    padding-bottom: 50px;
+    padding: 20px 0px 100px 0px;
     display: flex;
     justify-content: space-between;
 }
@@ -20,18 +19,25 @@ section{
     justify-content: left;
 }
 
+.section-year {
+    color: var(--accent-dark);
+}
+
 /* Figure */
 .artwork-item {
     margin: 0 0 20px 0;
     padding: 0px;
     display: flex;
     background-color: var(--accent-light);
-    color: var(--light-text);
+    color: var(--accent-dark);
     text-align: center;
     font-style: italic;
+    font-size: smaller;
 }
 
-
+.artwork-image {
+    height: auto;
+}
 
 /* Figure img when image count > 3 */
 .column-3 > * .artwork-image {
@@ -58,12 +64,11 @@ section{
 }
 
 @media screen and (max-width:725px) {
-    h2{
+    /* h2{
         text-align: center;
-    }
+    } */
     .section-content {
-        padding-bottom: 10px;
-        padding-top: 0px;
+        padding: 10px 0px 10px 0px;
         flex-direction: column;
         align-items: center;
     }
@@ -78,7 +83,9 @@ section{
         max-width: inherit;
     }
     .column-2:has(> p ) {
-        width: inherit !important;
+        padding-bottom: 10px;
+        max-width: 500px;
+        width: calc(100vw - 100px);
     }
     .artwork-item {
         max-width: 500px;
